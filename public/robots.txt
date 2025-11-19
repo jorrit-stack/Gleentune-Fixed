@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Data Usage Policy
+# Gleetune is a directory service linking to publicly-available radio streams.
+# We do NOT host, store, or retransmit audio content.
+# Data sources: Radio Browser (CC0), EiBi (free distribution), GeoNames (CC-BY 4.0)
+# Crawling: Standard crawling welcome. Respect rate limits.
+# Contact: contact@gleetune.com
+
+Sitemap: https://gleetune.com/sitemap.xml

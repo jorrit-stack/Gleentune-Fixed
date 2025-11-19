@@ -1,0 +1,104 @@
+interface LogoProps {
+  className?: string;
+  showSlogan?: boolean;
+}
+
+export default function Logo({ className = '', showSlogan = false }: LogoProps) {
+  return (
+    <div className={`flex items-center gap-3 ${className}`}>
+      <svg
+        width="50"
+        height="50"
+        viewBox="0 0 50 50"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="flex-shrink-0"
+      >
+        {/* Main globe circle */}
+        <circle cx="25" cy="25" r="15" fill="url(#globe-bg)" />
+        <circle cx="25" cy="25" r="15" stroke="#14b8a6" strokeWidth="2" />
+
+        {/* Vertical meridian lines */}
+        <ellipse cx="25" cy="25" rx="15" ry="7" stroke="#0d9488" strokeWidth="1.2" fill="none" opacity="0.5" />
+        <ellipse cx="25" cy="25" rx="7" ry="15" stroke="#0d9488" strokeWidth="1.2" fill="none" opacity="0.5" />
+        <ellipse cx="25" cy="25" rx="11" ry="15" stroke="#0d9488" strokeWidth="0.8" fill="none" opacity="0.3" />
+
+        {/* Horizontal latitude lines */}
+        <ellipse cx="25" cy="25" rx="15" ry="11" stroke="#0d9488" strokeWidth="0.8" fill="none" opacity="0.3" />
+        <line x1="10" y1="25" x2="40" y2="25" stroke="#0d9488" strokeWidth="1.2" opacity="0.5" />
+
+        {/* Broadcasting signal waves - concentric arcs */}
+        <path
+          d="M 38 18 Q 42 15 44 13"
+          stroke="#14b8a6"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <path
+          d="M 40 21 Q 43 19 45 17"
+          stroke="#14b8a6"
+          strokeWidth="2"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.6"
+        />
+        <path
+          d="M 38 32 Q 42 35 44 37"
+          stroke="#14b8a6"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <path
+          d="M 40 29 Q 43 31 45 33"
+          stroke="#14b8a6"
+          strokeWidth="2"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.6"
+        />
+
+        {/* Center broadcast point */}
+        <circle cx="25" cy="25" r="2.5" fill="#14b8a6" opacity="0.8" />
+        <circle cx="25" cy="25" r="1.5" fill="#5eead4" />
+
+        {/* Gradient definitions */}
+        <defs>
+          <radialGradient id="globe-bg" cx="35%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#99f6e4" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="#14b8a6" stopOpacity="0.15" />
+          </radialGradient>
+          <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f59e0b" />
+            <stop offset="20%" stopColor="#ef4444" />
+            <stop offset="40%" stopColor="#ec4899" />
+            <stop offset="60%" stopColor="#8b5cf6" />
+            <stop offset="80%" stopColor="#3b82f6" />
+            <stop offset="100%" stopColor="#14b8a6" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div className="flex flex-col">
+        <span className="text-2xl leading-none relative inline-block" style={{
+          background: 'linear-gradient(to right, #f59e0b 0%, #ef4444 25%, #ec4899 50%, #8b5cf6 75%, #3b82f6 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          fontFamily: '"Inter", -apple-system, system-ui, sans-serif',
+          fontWeight: '700',
+          letterSpacing: '0.15em',
+          filter: 'drop-shadow(0 2px 4px rgba(251, 146, 60, 0.3)) drop-shadow(0 0 12px rgba(236, 72, 153, 0.2))'
+        }}>
+          GLEETUNE
+        </span>
+        {showSlogan && (
+          <span className="text-[10px] text-amber-700 font-medium tracking-wide mt-1">
+            Tuning the World Together in Every Beat
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
