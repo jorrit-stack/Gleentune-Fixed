@@ -1,0 +1,24 @@
+{
+  "version": "v552-test",
+  "timestamp": "2025-11-13T03:48:57.144Z",
+  "type": "manual",
+  "tables": {
+    "bands": 5,
+    "cities": 168038,
+    "countries": 252,
+    "listening_history": 6,
+    "radio_stations": 19915,
+    "shortwave_stations": 43,
+    "station_locations": 1240,
+    "station_sources": 2385,
+    "stations": 2385,
+    "sw_regions": 0,
+    "user_favorites": 0
+  },
+  "totalRows": 194269,
+  "totalTables": 11,
+  "fileSize": 88586694,
+  "filePath": "/tmp/cc-agent/59412395/project/backups/radio_catalog_v552-test_manual_2025-11-13.sql.gz",
+  "compressed": true,
+  "compressedSize": 12493137
+}
