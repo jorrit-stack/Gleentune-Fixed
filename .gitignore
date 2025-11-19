@@ -11,6 +11,16 @@ dist
 dist-ssr
 *.local
 
+# Large data dumps / backups (not needed for building the app)
+backups/
+full-india-batch-*
+full-india-import.sql
+consolidated_migration.sql
+stations_without_streams.csv
+sked-b25.csv
+cities1000.*
+eibi.txt
+
 .vscode/*
 !.vscode/extensions.json
 .idea
